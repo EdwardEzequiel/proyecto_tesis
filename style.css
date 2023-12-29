@@ -282,6 +282,10 @@ nav.menu .sub-menu li {
     position: relative;
     margin-bottom: 15px;
 }
+.thumbnail img{
+    width: 100%;
+    height: auto;
+}
 
 .dotgrid .dot-image > a,
 .dotgrid .thumbnail.hover{
@@ -336,10 +340,8 @@ nav.menu .sub-menu li {
        #Sub menu y mega
     */
     nav.menu  .sub-menu {
-        left: 0;
-        right: 0;
+        width: fit-content;
         padding: 50px 0;
-        display:block;
     }
     
     
