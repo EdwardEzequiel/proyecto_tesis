@@ -139,6 +139,10 @@ h4 {font-size: 1em;}
     color: var(--dark-color);
 }
 
+.title {
+    font-size: clamp(30px, -0.875em + 8.333vw, var(--fs-max, 40px));
+}
+
 
 
 
@@ -303,7 +307,8 @@ nav.menu .sub-menu li {
     transition: var(--transition-color);
 }
 
-.list-inline a:hover {
+.list-inline a:hover,
+.menu-trigger:hover {
     color: var(--light-color);
 }
 
@@ -467,6 +472,32 @@ nav.menu .sub-menu li {
     pointer-events: all;
 }
 
+.scrollto > .wrapper {
+    overflow-x: auto;
+    overscroll-behavior-inline: contain;
+    scroll-snap-type: inline mandatory;
+}
+
+.scrollto .wrapper::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+.scrollto .wrapper::-webkit-scrollbar-thumb {
+    --border-color: var(var(var(--white-color)));
+    background-color: var(--light-color);
+    border: 3px solid var(--border-color);
+    border-radius: 20px;
+}
+
+.scrollto.wrapper:hover::-webkit-scrollbar-thumb {
+    background-color: var(--grey-color);
+}
+
+.scrollto.wrapper:hover::-webkit-scrollbar-thumb:hover {
+    background-color: var(--grey-color);
+}
+
 
 
 
@@ -553,7 +584,16 @@ form.search :where(i:last-child) {
     height: 100%;
     background-color: var(--white-color);
     pointer-events: auto; 
+    transform: translateX(var(--transX, -100%));
+    transition: var(--transition-transform);
 }
+
+.mobile-menu.active .wrap {
+    transform: translateX(0);
+}
+
+
+
 
 .mobile-menu .close-trigger,
 .mobile-menu .child-trigger {
@@ -562,7 +602,7 @@ form.search :where(i:last-child) {
     right: -40px;
     width: 40px;
     height: 40px;
-    color: var(--primary-color);
+    color: var(--white-color);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -641,8 +681,57 @@ form.search :where(i:last-child) {
 
 
 
+/*
+ SLIDER
+*/
+
+.slider :where(.image, ob-cover) {
+    position: center;
+}
+
+.slider .ob-cover {
+    height: 300px;
+}
+
+.ob-cover img {
+    position: absolute;
+    object-fit: cover;
+}
+
+.slider .title-info .wrap {
+    background-color: var(--dark-color);
+    background-color: transparent;
+}
 
 
+
+
+
+.slider .title-info .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding-bottom: 5vw;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+ .slider .title-info .price {
+    position: absolute;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    margin-top: -40px;
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+ }
 
 
 
@@ -716,6 +805,45 @@ form.search :where(i:last-child) {
     nav.menu .sub-menu li {
         padding: 5px 30px;
     }
+
+/*_#SLIDER*/
+
+.slider .ob-cover {
+    height: calc(100vh - 80px);
+}
+
+
+
+.slider .title-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.slider h3 {
+    --fs-max: 80px;
+    color: var(--white-color);
+}
+
+
+.slider .button a {
+    border-color: var(--white-color);
+    color: var(--white-color);
+}
+
+.slider .button a:hover {
+    border-color: var(--dark-color);
+}
+
+
+
+
+
+
+
+
+
 
 }
 

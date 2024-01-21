@@ -31,3 +31,26 @@ submenu.forEach((menu) => menu.addEventListener('click', function(e){
      }
 
 }))
+
+//slider
+
+const swiper = new Swiper('.sliderbox', {
+    direction: 'vertical',
+    loop: true,
+  
+    // pagination
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  
+    // Navegacion
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  
+    //  scrollbar
+    scrollbar: {
+      el: '.swiper-scrollbar',
+    },
+  });
