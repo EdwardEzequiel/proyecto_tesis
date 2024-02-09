@@ -6,8 +6,8 @@
     <title>Home Outlest</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
 </head>
 <body>
     <div id="page" class="page-home">
@@ -198,17 +198,24 @@
         </header>
         <main>
             <div class="slider">
-                <div class="sliderbox Swiper">
-                    <div class="wrap Swiper-wrapper">
+                <div class="sliderbox swiper">
+                    <div class="wrap swiper-wrapper">
                         <div class="item swiper-slide">
                             <div class="image">
                                 <div class="ob-cover">
-                                    <img src="imagenes/img-slider1.0.jpg"  height="500" width="3000">
-                                </div>
+                                    <div class="swiper mySwiper">
+                                       <div class="swiper-wrapper">
+                                               <div class="swiper-slide">
+                                                   <img src="imagenes/img-slider3.0.jpg"  height="600" width="3000">
+                                                </div>
+                                           
+                                        </div>
+                                    </div>  
+                                </div>         
                                 <div class="title-info">
                                     <div class="container wide">
                                         <div class="wrap">
-                                            <span class="price">$25</span>
+                                            <span class="price">$50</span>
                                             <h3 class="title">Feel the Bee</h3>
                                             <div class="button"><a href="" class="primary-btn">Compra ahora</a></div>
                                         </div>
@@ -216,6 +223,48 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="item swiper-slide">
+                           <div class="image">
+                               <div class="ob-cover">
+                                    <div class="swiper mySwiper">
+                                       <div class="swiper-wrapper">
+                                              <div class="swiper-slide">
+                                                 <img src="imagenes/img-slider2.0.jpg"  height="600" width="3000">
+                                              </div>
+                                        </div>
+                                    </div> 
+                               </div>
+                                <div class="title-info">
+                                    <div class="container wide">
+                                        <div class="wrap">
+                                            <span class="price">$40</span>
+                                            <h3 class="title">Feel the Bee</h3>
+                                            <div class="button"><a href="" class="primary-btn">Compra ahora</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item swiper-slide">
+                            <div class="image">
+                                <div class="ob-cover">
+                                    <div class="swiper mySwiper"></div>
+                                    <img src="imagenes/img-slider1.0.jpg"  height="600" width="3000">
+                                </div>
+                                <div class="title-info">
+                                    <div class="container wide">
+                                        <div class="wrap">
+                                            <span class="price">$38</span>
+                                            <h3 class="title">Feel the Bee</h3>
+                                            <div class="button"><a href="" class="primary-btn">Compra ahora</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="custom-pagination">
+                        <div class="swiper-pagination"></div>
                     </div>
                 </div>
             </div>

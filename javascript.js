@@ -34,23 +34,24 @@ submenu.forEach((menu) => menu.addEventListener('click', function(e){
 
 //slider
 
-const swiper = new Swiper('.sliderbox', {
-    direction: 'vertical',
-    loop: true,
-  
-    // pagination
-    pagination: {
-      el: '.swiper-pagination',
-    },
-  
-    // Navegacion
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  
-    //  scrollbar
-    scrollbar: {
-      el: '.swiper-scrollbar',
-    },
-  });
+const swiper = new Swiper('.sliderbox swiper', {
+  loop: true,
+  effect: 'fade',
+  autoHeight: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
